@@ -27,6 +27,9 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser (
 ### Healthcheck
 
 A simple healthcheck endpoint is available at `/healthz` (served as a static HTML file) to allow external preview systems to verify readiness.
+- The file is located at `public/healthz.html`.
+- You can change the expected path via environment variable `REACT_APP_HEALTHCHECK_PATH`, but the CRA dev server serves static files from `/public` directly; if a different path is required by the orchestrator, configure the probe to request `/healthz`.
+- Script `npm run healthcheck` always exits 0 and can be used by CI as a readiness hook once the server is started.
 
 ### `npm test`
 
