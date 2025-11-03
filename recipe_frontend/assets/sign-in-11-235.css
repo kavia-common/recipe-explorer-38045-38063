@@ -1,0 +1,128 @@
+/* Screen-specific refinements */
+
+/* Typography applications */
+#hello-text, .text-hello {
+  font-family: var(--typo-60-family);
+  font-size: var(--typo-60-size);
+  font-weight: var(--typo-60-weight);
+  line-height: var(--typo-60-line-height);
+  letter-spacing: var(--typo-60-letter-spacing);
+  color: var(--typo-60-color);
+  text-align: left;
+  margin: 0;
+}
+#welcome-text, .text-welcome {
+  font-family: var(--typo-61-family);
+  font-size: var(--typo-61-size);
+  font-weight: var(--typo-61-weight);
+  line-height: var(--typo-61-line-height);
+  letter-spacing: var(--typo-61-letter-spacing);
+  color: var(--typo-61-color);
+  text-align: left;
+  margin: 0;
+}
+
+/* Input fields */
+#input-email .label,
+#input-password .label {
+  font-family: var(--typo-66-family);
+  font-size: var(--typo-66-size);
+  font-weight: var(--typo-66-weight);
+  line-height: var(--typo-66-line-height);
+  color: var(--typo-66-color);
+  margin: 0;
+}
+#input-email .placeholder,
+#input-password .placeholder {
+  font-family: var(--typo-65-family);
+  font-size: var(--typo-65-size);
+  font-weight: var(--typo-65-weight);
+  line-height: var(--typo-65-line-height);
+  color: var(--typo-65-color);
+  margin: 0;
+}
+#input-email .input-rect,
+#input-password .input-rect {
+  background: transparent;
+  border: var(--style-30-border-width) solid var(--style-30-border-color);
+  border-radius: var(--style-30-border-radius);
+}
+
+/* Or sign in with line and text */
+#or-line .line {
+  background: var(--style-28-background);
+}
+#or-line .or-text {
+  font-family: var(--typo-64-family);
+  font-size: var(--typo-64-size);
+  font-weight: var(--typo-64-weight);
+  line-height: var(--typo-64-line-height);
+  color: var(--typo-64-color);
+  margin: 0;
+  text-align: left;
+}
+
+/* Social icon buttons */
+.btn-social-bg {
+  background: var(--color-ffffff);
+  border-radius: var(--style-126-border-radius);
+  box-shadow: var(--style-126-shadow);
+}
+
+/* Sign up text */
+#signup-text.signup-link {
+  font-family: var(--typo-63-family);
+  font-size: var(--typo-63-size);
+  font-weight: var(--typo-63-weight);
+  line-height: var(--typo-63-line-height);
+  color: var(--typo-63-color);
+  margin: 0;
+}
+
+/* Big Button */
+#big-button.big-button {
+  background: var(--style-11-background);
+  border: none;
+  border-radius: 10px;
+  display: flex; /* layout: horizontal */
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: var(--shadow-1);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+#big-button.big-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.22);
+}
+#big-button .btn-label {
+  font-family: var(--typo-58-family);
+  font-size: var(--typo-58-size);
+  font-weight: var(--typo-58-weight);
+  line-height: var(--typo-58-line-height);
+  color: var(--typo-58-color);
+}
+#big-button .btn-icon::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  /* Draw arrow via border to approximate boolean_operation arrow-right */
+  border-top: 2px solid var(--color-ffffff);
+  border-right: 2px solid var(--color-ffffff);
+  transform: rotate(45deg);
+  margin-left: 6px;
+}
+.time {
+  font-family: var(--typo-67-family);
+  font-size: var(--typo-67-size);
+  font-weight: var(--typo-67-weight);
+  line-height: var(--typo-67-line-height);
+  letter-spacing: var(--typo-67-letter-spacing);
+  color: var(--typo-67-color);
+}
+
+/* Accessibility focus */
+#big-button:focus { outline: 2px solid var(--theme-secondary); outline-offset: 2px; }
