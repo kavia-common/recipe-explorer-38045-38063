@@ -15,17 +15,45 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in development mode in a non-interactive way suitable for preview environments.
+
+- Binds to HOST=0.0.0.0 and default PORT=3000 (override via REACT_APP_PORT).
+- Disables automatically opening a browser.
+- Forces CI mode to avoid watch prompts.
+- Disables source maps by default to reduce memory usage (override via REACT_APP_ENABLE_SOURCE_MAPS=true).
+
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser (or the container-provided URL).
+
+### Healthcheck
+
+A simple healthcheck endpoint is available at `/healthz` (served as a static HTML file) to allow external preview systems to verify readiness.
 
 ### `npm test`
 
-Launches the test runner in interactive watch mode.
+Runs tests in CI mode (non-interactive watch disabled).
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+## Environment Variables
+
+These can be set by the orchestrator in `.env`:
+
+- REACT_APP_API_BASE
+- REACT_APP_BACKEND_URL
+- REACT_APP_FRONTEND_URL
+- REACT_APP_WS_URL
+- REACT_APP_NODE_ENV
+- REACT_APP_NEXT_TELEMETRY_DISABLED
+- REACT_APP_ENABLE_SOURCE_MAPS
+- REACT_APP_PORT
+- REACT_APP_TRUST_PROXY
+- REACT_APP_LOG_LEVEL
+- REACT_APP_HEALTHCHECK_PATH
+- REACT_APP_FEATURE_FLAGS
+- REACT_APP_EXPERIMENTS_ENABLED
 
 ## Customization
 
